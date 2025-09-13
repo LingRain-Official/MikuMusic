@@ -1,0 +1,44 @@
+require "env"
+local ListItemView = require "mods.views.ListItemView"
+return{
+  LinearLayoutCompat,
+  layout_width="fill",
+  layout_height="fill",
+  orientation="vertical",
+   {
+    BottomSheetDragHandleView,
+    layout_width="fill",
+  },
+  {
+    NestedScrollView,
+    layout_width="fill",
+    layout_height="fill",
+    {
+      LinearLayoutCompat;
+      gravity="center";
+      orientation="vertical";
+      padding="10dp";
+      paddingBottom="30dp";
+      layout_width="match_parent";
+      layout_height="fill";
+      {
+        ListItemView,
+        layout_width="fill";
+        text="WeChat,关注微信公众号“LingRain”";
+        Icon=activity.getLuaDir().."/res/drawable/wechat.png",
+      };
+      {
+        ListItemView,
+        layout_width="fill";
+        text="Bilibili,关注B站up主“mmmmiku-dayo”";
+        Icon=activity.getLuaDir().."/res/drawable/bilibili.png",
+      };
+      {
+        ListItemView,
+        layout_width="fill";
+        text="GitHub,去GitHub给MikuMusic的项目点个star！";
+        Icon=activity.getLuaDir().."/res/drawable/GitHub.png",
+      };
+    };
+  };
+};

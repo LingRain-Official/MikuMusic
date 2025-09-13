@@ -1,0 +1,59 @@
+require "env"
+return
+{
+  LinearLayoutCompat,
+  layout_width="fill",
+  layout_height="fill",
+  orientation="vertical",
+  {
+    BottomSheetDragHandleView,
+    layout_width="fill",
+  },
+  {
+    NestedScrollView,
+    layout_width="fill",
+    layout_height="fill",
+    {
+      LinearLayoutCompat;
+      gravity="center";
+      orientation="vertical";
+      padding="10dp";
+      paddingBottom=0;
+      layout_width="match_parent";
+      layout_height="fill";
+      {
+        TextInputLayout,
+        layout_width="fill",
+        hint="输入网易云链接",
+        layout_marginLeft="10dp",
+        layout_marginRight="10dp",
+        {
+          TextInputEditText,
+          layout_width="fill",
+          singleLine=true,
+          --inputType="number";
+          id="url163",
+          theme=MDC_R.style.Widget_Material3_TextInputLayout_OutlinedBox
+          --style=MDC_R.style.Widget_Material3_TextInputEditText_OutlinedBox,
+        },
+      };
+   
+      {
+        MaterialButton;
+        layout_width="fill";
+        id="add";
+        layout_marginTop="10dp",
+        layout_gravity="center";
+        text="添加单曲";
+      };
+  
+      {
+        MaterialTextView;
+        layout_marginBottom="50dp",
+        layout_gravity="center";
+        gravity="center",
+        text=[==[在网易云播放界面点击右上角分享图标，“分享至”中选择复制链接]==];
+      };
+    };
+  };
+};

@@ -1,0 +1,22 @@
+{
+  "versionName": "1.4",
+  "versionCode": "140",
+  "uses_sdk": {
+    "minSdkVersion": "28",
+    "targetSdkVersion": "28"
+  },
+  "package": "MikuMusic.LR",
+  "application": {
+    "label": "MikuMusic",
+    "debugmode": false
+  },
+  "user_permission": [
+  "WRITE_EXTERNAL_STORAGE",
+  "READ_EXTERNAL_STORAGE",
+  "WAKE_LOCK",
+  "INTERNET"
+  ],
+  "compilation": false,
+  "skip_compilation": [
+  ]
+}

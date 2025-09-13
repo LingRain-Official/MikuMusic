@@ -1,0 +1,42 @@
+require "env"
+local ListItemView = require "mods.views.ListItemView"
+return{
+  LinearLayoutCompat,
+  layout_width="fill",
+  layout_height="fill",
+  orientation="vertical",
+  {
+    NestedScrollView,
+    layout_width="fill",
+    layout_height="fill",
+    {
+      LinearLayoutCompat;
+      gravity="center";
+      orientation="vertical";
+      padding="10dp";
+      paddingBottom="30dp";
+      layout_width="match_parent";
+      layout_height="fill";
+      {
+        ListItemView,
+        layout_width="fill";
+        id="cycle";
+        text="单曲循环,循环播放一首歌";
+        onClick=function(v)
+          activity.setSharedData("setting_cycle",true)
+        end;
+        Icon=activity.getLuaDir().."/res/drawable/repeat_one.png",
+      };
+      {
+        ListItemView,
+        layout_width="fill";
+        id="cycle2";
+        text="轮播,播放完一首播放下一首";
+        onClick=function(v)
+          activity.setSharedData("setting_cycle",false)
+        end;
+        Icon=activity.getLuaDir().."/res/drawable/repeat.png",
+      };
+    };
+  };
+};
